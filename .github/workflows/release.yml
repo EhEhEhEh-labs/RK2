@@ -17,9 +17,10 @@ jobs:
     steps:
     - uses: actions/checkout@v4
       with:
-        submodules: recursive
+         submodules: true
     - name: CoR 1
       run: cmake -B build
+      
     - name: CoR 2
       run: cmake --build build
     - name: CoR 3
