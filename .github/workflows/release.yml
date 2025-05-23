@@ -15,10 +15,10 @@ jobs:
       contents: write
 
     steps:
-    - uses: actions/checkout@v4.1.2
+    - name: Checkout
+      uses: actions/checkout@v4.1.2
       with:
          submodules: recursive
-         fetch-depth: 0
     - name: CoR 1
       run: cmake -B build
       
