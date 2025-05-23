@@ -1,0 +1,4 @@
+/home/vboxuser/projects/rk2/build/CMakeFiles/CoR.dir
+/home/vboxuser/projects/rk2/build/CMakeFiles/main.dir
+/home/vboxuser/projects/rk2/build/CMakeFiles/edit_cache.dir
+/home/vboxuser/projects/rk2/build/CMakeFiles/rebuild_cache.dir

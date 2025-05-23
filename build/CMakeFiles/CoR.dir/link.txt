@@ -1,0 +1,2 @@
+/usr/bin/ar qc libCoR.a CMakeFiles/CoR.dir/CoR.cpp.o
+/usr/bin/ranlib libCoR.a
