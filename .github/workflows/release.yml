@@ -1,0 +1,32 @@
+name: CMake
+
+on:
+ push:
+   tags:
+     - '*'
+
+jobs: 
+
+  build:
+
+    runs-on: ubuntu-latest
+    
+    permissions:
+      contents: write
+
+    steps:
+    - uses: actions/checkout@v3
+    - name: CoR 1
+      run: cmake -B build
+    - name: CoR 2
+      run: cmake --build build
+    - name: CoR 3
+      run: cmake --build build --target package
+    - name: CoR 4
+      run: cmake --build build --target package_source
+
+    - name: Make a release
+      uses: ncipollo/release-action@v1.14.0
+      with:
+        artifacts: "build/*.deb,build/*.rpm,build/*.tar.gz,build/*.zip"
+        token: ${{ secrets.GITHUB_TOKEN }}

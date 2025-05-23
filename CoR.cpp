@@ -2,7 +2,7 @@
 #include <iostream>
 #include <stdexcept>
 
-std::string GetNameOfTask(Task task)
+inline std::string GetNameOfTask(Task task)
 {
     switch (task)
     {

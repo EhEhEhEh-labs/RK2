@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/test_app.dir/tests/tests.cpp.o -o test_app  libCoR.a lib/libgtest_main.a lib/libgmock_main.a --coverage lib/libgmock.a lib/libgtest.a 
