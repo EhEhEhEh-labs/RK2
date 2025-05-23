@@ -11,7 +11,7 @@ jobs:
         with:
           submodules: recursive
          
-      - name: Configure and Build banking
+      - name: Configure and Build
         run: |
           cmake -B build
           cmake --build build
