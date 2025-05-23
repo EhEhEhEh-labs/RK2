@@ -18,7 +18,14 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v4.1.2
       with:
-         submodules: recursive
+         persist-credentials: false
+
+    - name: Initialize and Update Submodules
+      run: |
+        git config --global --add safe.directory "$GITHUB_WORKSPACE"
+        git submodule update --init --recursive --jobs 8
+      env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     - name: CoR 1
       run: cmake -B build
       
